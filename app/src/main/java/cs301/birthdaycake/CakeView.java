@@ -120,8 +120,8 @@ public class CakeView extends SurfaceView {
         canvas.drawRect(cakeLeft, top, cakeLeft + cakeWidth, bottom, cakePaint);
 
         //Now a candle in the center
-        drawCandle(canvas, cakeLeft + cakeWidth - candleWidth/2, cakeTop);
         drawCandle(canvas, cakeLeft + cakeWidth - candleWidth, cakeTop);
+        drawCandle(canvas, cakeLeft + cakeWidth - candleWidth*30, cakeTop);
 
     }//onDraw
 
