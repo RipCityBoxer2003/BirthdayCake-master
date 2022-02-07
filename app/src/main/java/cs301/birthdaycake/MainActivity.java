@@ -1,6 +1,8 @@
 package cs301.birthdaycake;
 
 import android.content.pm.ActivityInfo;
+import android.os.Build;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -13,10 +15,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         setContentView(R.layout.activity_main);
-        int CakeViewID = findViewById(R.id.Cakeview);
+        int CakeViewID = findViewById(R.id.CakeView);
 
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     public void Goodbye(View button){
         Log.i("button", "Goodbye: ");
         finishAffinity();
