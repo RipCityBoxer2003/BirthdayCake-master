@@ -16,6 +16,11 @@ public class CakeView extends SurfaceView {
     Paint outerFlamePaint = new Paint();
     Paint innerFlamePaint = new Paint();
     Paint wickPaint = new Paint();
+    /**
+     * private variable of the CakeModel class
+     */
+
+    private CakeModel CM;
 
     /* These constants define the dimensions of the cake.  While defining constants for things
         like this is good practice, we could be calculating these better by detecting
@@ -35,6 +40,13 @@ public class CakeView extends SurfaceView {
     public static final float innerFlameRadius = 15.0f;
 
 
+    /**
+     * getter method for LAB 3
+     */
+
+    public CakeModel getCM(){
+        return CM;
+    }
 
     /**
      * ctor must be overridden here as per standard Java inheritance practice.  We need it
@@ -42,6 +54,7 @@ public class CakeView extends SurfaceView {
      */
     public CakeView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        CM = new CakeModel();
 
         //This is essential or your onDraw method won't get called
         setWillNotDraw(false);
